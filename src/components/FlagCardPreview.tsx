@@ -17,7 +17,7 @@ export const FlagCardPreview = ({ country }: FlagCardPreviewProps) => {
   return (
     <Link to={`/${linkPath}`}>
       <div className="w-80 h-[400px] bg-very-light-gray shadow-md rounded-md z-10 dark:bg-dark-blue dark:text-white">
-        <img src={flags.svg} className="w-80  h-56 rounded-t-md object-cover" />
+        <img src={flags.svg} className="w-80 h-56 rounded-t-md object-cover" />
         <h2 className="font-bold pt-8 pl-4 pb-4 text-xl ">{name.common}</h2>
         <div className="flex flex-col pl-4">
           <div>

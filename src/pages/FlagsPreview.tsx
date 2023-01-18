@@ -7,17 +7,6 @@ import { FlagPreview } from "../components/FlagPreview";
 
 const continents = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
 
-// type langs = "pur" | "ars" | "eng";
-
-// interface a {
-//   langs: Partial<{ [key in langs]: string }>;
-// }
-// const b: a = {
-//   langs: {
-//     pur: "asd",
-//   },
-// };
-
 import { Country } from "../types";
 import { LoadingSpinner } from "../components/LoadingSpinner";
 
