@@ -12,7 +12,11 @@ export const Select = ({
 }: SelectProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const renderOptions = (option: string) => (
-    <span onClick={() => onOptionClick(option)} key={option}>
+    <span
+      className="cursor-pointer"
+      onClick={() => onOptionClick(option)}
+      key={option}
+    >
       {option}
     </span>
   );
@@ -22,7 +26,7 @@ export const Select = ({
   return (
     <div
       onClick={handleToggle}
-      className="bg-very-light-gray pt-4 w-40 h-14 text-center shadow-md z-20 dark:bg-dark-blue dark:text-white"
+      className="bg-very-light-gray pt-4 w-40 h-14 text-center shadow-md z-20 dark:bg-dark-blue dark:text-white cursor-pointer"
     >
       <span>{!currentOption ? "Filter by Region" : currentOption}</span>
       <div

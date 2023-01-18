@@ -40,12 +40,10 @@ export const Header = () => {
   return (
     <header className="w-full h-20 px-5 sm:px-20 bg-very-light-gray shadow-md flex justify-between items-center dark:bg-dark-blue dark:text-white">
       <h1 className="text-l font-bold sm:text-2xl">Where in the World?</h1>
-      <div className="flex items-center ">
-        <button onClick={toggleDarkMode}>
-          <Moon />
-        </button>
+      <button onClick={toggleDarkMode} className="flex items-center">
+        <Moon />
         <span className="text-m ml-2 sm:text-lg">Dark Mode</span>
-      </div>
+      </button>
     </header>
   );
 };
