@@ -13,7 +13,7 @@ export const Select = ({
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const renderOptions = (option: string) => (
     <span
-      className="cursor-pointer hover:font-semibold dark:hover:text-gray-400 dark:hover:font-semibold"
+      className="cursor-pointer hover:font-semibold dark:hover:text-gray-400 dark:hover:font-semibold "
       onClick={() => onOptionClick(option)}
       key={option}
     >
