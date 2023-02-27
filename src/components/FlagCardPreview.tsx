@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { Link } from "react-router-dom";
 
 import { Country } from "../types";
@@ -8,11 +7,9 @@ interface FlagCardPreviewProps {
 }
 
 export const FlagCardPreview = ({ country }: FlagCardPreviewProps) => {
+  if (!country) return null;
   const { name, flags, population, region, capital } = country;
-  const linkPath = useMemo(
-    () => name.common.toLowerCase().replace(" ", "-"),
-    [name]
-  );
+  const linkPath = name.common.toLowerCase().replace(" ", "-");
 
   return (
     <Link to={`/${linkPath}`}>
@@ -34,7 +31,7 @@ export const FlagCardPreview = ({ country }: FlagCardPreviewProps) => {
               capital.map((cap, index) => {
                 if (index < capital.length - 1)
                   return <span key={cap}>{cap}, </span>;
-                else return <span key={cap}>{cap}</span>;
+                return <span key={cap}>{cap}</span>;
               })}
           </div>
         </div>

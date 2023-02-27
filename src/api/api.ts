@@ -1,4 +1,6 @@
-export const getCountries = async () => {
+import { Country } from "../types";
+
+export const getCountries = async (): Promise<Country[]> => {
   return await fetch(`${import.meta.env.VITE_API_URL}all`).then((response) =>
     response.json()
   );
